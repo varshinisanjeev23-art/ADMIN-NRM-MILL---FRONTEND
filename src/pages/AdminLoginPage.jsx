@@ -91,7 +91,7 @@ export default function AdminLoginPage() {
             shape="pill"
             size="large"
             text="signin_with"
-            width="100%"
+            width="400"
           />
         </div>
       </div>
