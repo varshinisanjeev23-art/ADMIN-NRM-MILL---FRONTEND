@@ -73,7 +73,7 @@ export default function AdminLoginPage() {
             Sign In
           </button>
           <div className="text-right">
-            <a href="/forgot-password" title="Go to customer forgot password page" className="text-blue-600 text-xs font-semibold hover:underline">Forgot password?</a>
+            <a href="/admin/forgot-password" the title="Forgot Admin Password" className="text-blue-600 text-xs font-semibold hover:underline">Forgot password?</a>
           </div>
         </form>
 

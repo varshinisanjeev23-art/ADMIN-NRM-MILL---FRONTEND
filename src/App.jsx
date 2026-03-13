@@ -1,5 +1,7 @@
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import AdminLoginPage from './pages/AdminLoginPage';
+import AdminForgotPasswordPage from './pages/AdminForgotPasswordPage';
+import AdminResetPasswordPage from './pages/AdminResetPasswordPage';
 import AdminDashboard from './pages/AdminDashboard';
 import ProductsPage from './pages/ProductsPage';
 import BookingsPage from './pages/BookingsPage';
@@ -33,6 +35,8 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/admin/login" element={<AdminLoginPage />} />
+          <Route path="/admin/forgot-password" element={<AdminForgotPasswordPage />} />
+          <Route path="/reset-password/:token" element={<AdminResetPasswordPage />} />
           <Route
             path="/admin/dashboard"
             element={
