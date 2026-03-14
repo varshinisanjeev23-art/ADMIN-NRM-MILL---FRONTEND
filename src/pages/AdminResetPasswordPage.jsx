@@ -16,6 +16,19 @@ export default function AdminResetPasswordPage() {
       setStatus({ ok: false, message: 'Passwords do not match' });
       return;
     }
+    const validatePassword = (pw) => {
+      const regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+      return regex.test(pw);
+    };
+
+    if (!validatePassword(password)) {
+      setStatus({ 
+        ok: false, 
+        message: 'Password must be at least 8 characters long and include an uppercase letter, a lowercase letter, a number, and a special character.' 
+      });
+      return;
+    }
+
     setLoading(true);
     setStatus({ ok: false, message: '' });
     try {
