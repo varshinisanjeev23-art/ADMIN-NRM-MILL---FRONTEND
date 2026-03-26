@@ -112,12 +112,10 @@ export default function ProductsPage() {
         await api.put(`/products/${editingId}`, formData, {
           headers: { 'Content-Type': 'multipart/form-data' }
         });
-        alert('Product updated!');
       } else {
         await api.post('/products', formData, {
           headers: { 'Content-Type': 'multipart/form-data' }
         });
-        alert('Product added!');
       }
       resetForm();
       loadProducts();
